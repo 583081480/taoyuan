@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 【自定义】页面标题，浏览器标签显示 -->
+    <title>桃源福利领取中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            /*【自定义】页面背景色 */
+            background-color: #f5f7fa;
+            padding: 20px 16px;
+        }
+
+        .wrapper {
+            max-width: 520px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+
+        /* 顶部标题栏 */
+        .header-bar {
+            /*【自定义】顶部背景颜色 */
+            background-color: #ff6b35;
+            color: #ffffff;
+            padding: 22px 16px;
+            text-align: center;
+        }
+        .header-bar h1 {
+            /*【自定义】大标题文字 */
+            font-size: 23px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .header-bar .sub-title {
+            /*【自定义】副标题文字 */
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* 板块小标题 */
+        .block-title {
+            padding: 18px 20px 10px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #2d2d2d;
+        }
+
+        /* 福利卡片通用样式 */
+        .card-item {
+            margin: 0 18px 16px;
+            border: 1px solid #e6e6e6;
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .card-item h3 {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 7px;
+        }
+        .card-item .desc {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 14px;
+        }
+
+        /* 按钮样式 */
+        .action-btn {
+            width: 100%;
+            /*【自定义】按钮主色 */
+            background-color: #ff6b35;
+            color: #ffffff;
+            border: none;
+            border-radius: 9px;
+            padding: 12px 0;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .action-btn:active {
+            /*【自定义】按钮点击按下颜色 */
+            background-color: #e05827;
+        }
+
+        /* 活动规则区域 */
+        .rule-area {
+            margin-top: 24px;
+            padding: 20px;
+        }
+        .rule-area h2 {
+            font-size: 17px;
+            color: #2d2d2d;
+            margin-bottom: 12px;
+        }
+        .rule-area ul {
+            list-style: none;
+        }
+        .rule-area li {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 9px;
+        }
+
+        /* 底部版权 */
+        .footer-tip {
+            margin-top:12px;
+            text-align:center;
+            font-size:13px;
+            color:#999;
+            padding-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- 顶部头部区域 -->
+    <div class="header-bar">
+        <h1>桃源福利领取中心</h1>
+        <div class="sub-title">桃源专属福利 每日免费领</div>
+    </div>
+
+    <!-- 福利专区标题 -->
+    <div class="block-title">福利专区</div>
+
+    <!-- 卡片1 【可以复制多份卡片，增加更多福利项】 -->
+    <div class="card-item">
+        <h3>🧧 桃源群聊专属福利 每日可领取</h3>
+        <div class="desc">每日都可领取的免费福利</div>
+        <button class="action-btn" data-link="https://6.ele66.cn/saas/bfb26f4f-190b-4319-b0a6-b2b30f55641e.html?utm_source=qq888">点击立即领取</button>
+    </div>
+
+    <!-- 卡片2 -->
+    <div class="card-item">
+        <h3>🛒 桃源专属薅羊毛裙</h3>
+        <div class="desc">每天不定时更新0撸优惠商品</div>
+        <button class="action-btn" data-link="https://0725.000url.cn/s/EDIwV">立即进裙领福利</button>
+    </div>
+
+    <!-- 【可以继续复制上面card-item块，新增更多福利卡片】 -->
+
+    <!-- 活动规则 -->
+    <div class="rule-area">
+        <h2>活动说明</h2>
+        <ul>
+            <li>1. 每日登录即可领取当日福利，数量有限先到先得</li>
+            <li>2. 领取成功后请按照指引完成兑换或使用</li>
+            <li>3. 所有福利均为免费领取，无需支付任何费用</li>
+            <li>4. 同一福利每日限领一次，重复领取无效</li>
+            <li>5. 活动最终解释权归主办方所有</li>
+        </ul>
+    </div>
+
+    <div class="footer-tip">
+        本页面仅为活动页面
+    </div>
+</div>
+
+<script>
+    // 按钮点击跳转逻辑，无需修改JS，只修改每个按钮上 data-link 的链接即可
+    const buttons = document.querySelectorAll('.action-btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetUrl = btn.getAttribute('data-link');
+            window.location.href = targetUrl;
+        })
+    })
+</script>
+</body>
+</html>
